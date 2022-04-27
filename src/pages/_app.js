@@ -4,6 +4,7 @@ import NProgress from "nprogress";
 import { RecoilRoot, useSetRecoilState } from "recoil";
 import { useEffect } from "react";
 import { windowState } from "atoms/states";
+import { Header } from "components";
 
 // Setting up NProgress : that really cool progress
 // bar at the top of the page!
@@ -47,6 +48,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <RecoilRoot>
       <WinStateListener />
+      <Header />
       <Component {...pageProps} />
     </RecoilRoot>
   );
