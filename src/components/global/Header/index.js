@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BsChevronDown } from "react-icons/bs";
+import { FiChevronDown } from "react-icons/fi";
 
 function Header() {
   return (
@@ -15,22 +15,22 @@ function Header() {
             </a>
           </Link>
         </div>
-        <div className="Header-nav w-full flex items-center justify-center">
+        <div className="Header-nav w-full flex items-center justify-center flex-wrap">
           <div className="Header-nav-item flex items-center col-gap-s">
             <p>LUNETTES DE SOLEIL</p>
-            <BsChevronDown />
+            <FiChevronDown />
           </div>
           <div className="Header-nav-item flex items-center col-gap-s">
             <p>LUNETTES DE VUE</p>
-            <BsChevronDown />
+            <FiChevronDown />
           </div>
           <div className="Header-nav-item flex items-center col-gap-s">
             <p>OFFRES</p>
-            <BsChevronDown />
+            <FiChevronDown />
           </div>
           <div className="Header-nav-item flex items-center col-gap-s">
             <p>NOUVEAUTÉS</p>
-            <BsChevronDown />
+            <FiChevronDown />
           </div>
         </div>
       </div>
