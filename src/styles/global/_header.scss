@@ -4,12 +4,18 @@
 	box-shadow: var(--shadow-2xl);
 	background-color: #fff;
 	&-wrapper {
+		@include desktop {
+			flex-direction: column;
+		}
 		margin: 0;
 		padding-bottom: 1.5rem;
 		padding-top: 1.5rem;
 	}
 	&-logo {
-		margin-bottom: 1.75rem;
+		@include desktop {
+			width: 100%;
+			margin-bottom: 1.75rem;
+		}
 		a {
 			text-decoration: none;
 			p {
@@ -37,5 +43,8 @@
 				margin-right: 2.25rem;
 			}
 		}
+	}
+	&-ham-menu {
+		font-size: 1.75rem;
 	}
 }
