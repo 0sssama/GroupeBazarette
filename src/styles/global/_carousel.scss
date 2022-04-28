@@ -1,0 +1,24 @@
+.Carousel {
+	height: 400px;
+	&-nav {
+		.nav-icon {
+			padding: 0.4rem;
+			background-color: var(--main);
+			color: #fff;
+			border-radius: 50%;
+			font-size: 1.5rem;
+			line-height: 0;
+			opacity: 0.3;
+			&.active {
+				cursor: pointer;
+				opacity: 1;
+			}
+		}
+	}
+	&-previous {
+		margin-right: 1.5rem;
+	}
+	&-next {
+		margin-left: 1.5rem;
+	}
+}
