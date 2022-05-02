@@ -79,7 +79,7 @@ a {
 
 .wrapper {
 	max-width: 100%;
-	margin: var(--header-height) auto 0;
+	margin: 1rem auto 0;
 	@include tablet {
 		max-width: var(--wrapper-width);
 	}

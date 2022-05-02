@@ -3,7 +3,7 @@ import { FiChevronDown, FiMenu } from "react-icons/fi";
 
 function Header() {
   return (
-    <div className="Header fixed top-0 left-0 right-0 flex items-center justify-center">
+    <div className="Header relative flex items-center justify-center">
       <div className="Header-wrapper wrapper padding-x flex items-center justify-between">
         <div className="Header-logo flex items-center justify-center">
           <Link href="/">

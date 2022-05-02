@@ -1,7 +1,6 @@
 .Header {
 	z-index: 1337;
 	height: var(--header-height);
-	box-shadow: var(--shadow-2xl);
 	background-color: #fff;
 	&-wrapper {
 		@include desktop {
