@@ -11,6 +11,9 @@
 		@include desktop {
 			height: 450px;
 		}
+		.Products-wrapper {
+			transition: transform 500ms var(--transition);
+		}
 	}
 	&-nav {
 		.nav-icon {
