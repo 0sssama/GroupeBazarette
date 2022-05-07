@@ -8,7 +8,11 @@ function ProductCarousel({ titles, products, className }) {
   const { width } = useRecoilValue(windowState);
 
   // width of product image
-  const produtWidth = width > 768 ? 300 : 200;
+  const productWidth = width > 768 ? 300 : 200;
+
+  // iteration count
+  // const itCount = width > 768 ? 4 : 1;
+  const itCount = 1;
 
   // current product
   const [current, setCurrent] = useState(0);
@@ -26,13 +30,13 @@ function ProductCarousel({ titles, products, className }) {
           next: current !== products.length - 1,
         }}
         onNext={() => {
-          if (current < products.length - 1) {
-            setCurrent(current + 1);
+          if (current < products.length - itCount) {
+            setCurrent(current + itCount);
           }
         }}
         onPrevious={() => {
-          if (current > 0) {
-            setCurrent(current - 1);
+          if (current > itCount - 1) {
+            setCurrent(current - itCount);
           }
         }}
         className={className}
@@ -40,7 +44,7 @@ function ProductCarousel({ titles, products, className }) {
         <div
           className="Products-wrapper flex items-start"
           style={{
-            transform: `translateX(${current * -produtWidth}px)`,
+            transform: `translateX(${current * -productWidth}px)`,
           }}
         >
           {products.map((product, index) => (
