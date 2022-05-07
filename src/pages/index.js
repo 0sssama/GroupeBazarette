@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Carousel, Product, Section } from "components";
+import { Carousel, Product, Section, Banner } from "components";
 
 export default function Home() {
   return (
@@ -10,18 +10,7 @@ export default function Home() {
         </title>
       </Head>
       <div className="container w-full padding-x text-center">
-        <Carousel
-          active={{
-            previous: true,
-            next: true,
-          }}
-        >
-          <img
-            src="/assets/placeholders/placeholder.png"
-            alt="banner"
-            className="covered-img"
-          />
-        </Carousel>
+        <Banner />
         <Section
           title={{
             sub: "Collection —",

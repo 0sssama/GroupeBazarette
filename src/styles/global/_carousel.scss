@@ -1,14 +1,24 @@
 .Carousel {
-	height: 400px;
+	height: 100%;
+	&.Banner {
+		height: 350px;
+		@include desktop {
+			height: 400px;
+		}
+	}
 	&-nav {
 		.nav-icon {
-			padding: 0.4rem;
+			padding: 0.25rem;
 			background-color: var(--main);
 			color: #fff;
-			border-radius: 50%;
-			font-size: 1.5rem;
+			font-size: 1rem;
 			line-height: 0;
 			opacity: 0.3;
+			border-radius: 50%;
+			@include desktop {
+				padding: 0.4rem;
+				font-size: 1.5rem;
+			}
 			&.active {
 				cursor: pointer;
 				opacity: 1;
@@ -16,10 +26,16 @@
 		}
 	}
 	&-previous {
-		margin-right: 1.5rem;
+		margin-right: 0.75rem;
+		@include desktop {
+			margin-right: 1.5rem;
+		}
 	}
 	&-next {
-		margin-left: 1.5rem;
+		margin-left: 0.75rem;
+		@include desktop {
+			margin-left: 1.5rem;
+		}
 	}
 	&-wrapper {
 		overflow: hidden;

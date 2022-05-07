@@ -1,8 +1,10 @@
 import { BiChevronRight, BiChevronLeft } from "react-icons/bi";
 
-function Carousel({ onPrevious, onNext, active, children }) {
+function Carousel({ onPrevious, onNext, active, children, className }) {
   return (
-    <div className="Carousel w-full flex items-center justify-center">
+    <div
+      className={`Carousel w-full flex items-center justify-center ${className}`}
+    >
       <div className="Carousel-previous Carousel-nav h-full flex items-center justify-center">
         <div
           className={`nav-icon ${active?.previous ? "active" : ""}`}
