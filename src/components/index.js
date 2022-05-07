@@ -1,6 +1,6 @@
-import Header from "components/global/Header";
+import HeaderPrimary from "components/global/Header/Primary";
 import Carousel from "components/global/Carousel";
 import Product from "components/global/Product";
 import Section from "components/global/Section";
 
-export { Header, Carousel, Product, Section };
+export { HeaderPrimary, Carousel, Product, Section };
