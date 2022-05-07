@@ -1,0 +1,72 @@
+[
+	{
+		"title": "Vasco da Gama",
+		"products": [
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product2.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product3.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product4.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product.jpeg",
+				"slug": "92213141"
+			}
+		]
+	},
+	{
+		"title": "Antonio Ferre",
+		"products": [
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product5.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product6.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product7.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product8.jpeg",
+				"slug": "92213141"
+			},
+			{
+				"name": "Produit Lunettes De Vue",
+				"price": "100",
+				"image": "/assets/placeholders/product5.jpeg",
+				"slug": "92213141"
+			}
+		]
+	}
+]

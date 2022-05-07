@@ -6,6 +6,12 @@
 			height: 400px;
 		}
 	}
+	&.ProductCarousel {
+		height: 350px;
+		@include desktop {
+			height: 450px;
+		}
+	}
 	&-nav {
 		.nav-icon {
 			padding: 0.25rem;

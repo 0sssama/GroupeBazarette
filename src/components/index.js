@@ -4,5 +4,14 @@ import Carousel from "components/global/Carousel";
 import Product from "components/global/Product";
 import Section from "components/global/Section";
 import Banner from "components/global/Banner";
+import ProductCarousel from "components/global/ProductCarousel";
 
-export { HeaderPrimary, HeaderSecondary, Carousel, Product, Section, Banner };
+export {
+  HeaderPrimary,
+  HeaderSecondary,
+  Carousel,
+  Product,
+  Section,
+  Banner,
+  ProductCarousel,
+};
