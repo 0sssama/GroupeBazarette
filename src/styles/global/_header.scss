@@ -1,7 +1,26 @@
 .Header {
 	z-index: 1337;
 	height: var(--header-height);
-	background-color: #fff;
+	&-Secondary {
+		.Header {
+			&-logo a p {
+				font-size: 1.25rem;
+			}
+		}
+		transform: translateY(calc(-1 * var(--header-height-with-bg)));
+		border-bottom: 1px solid transparent;
+		background-color: var(--white-opacity-9);
+		@supports (backdrop-filter: blur(8px)) {
+			background-color: var(--white-opacity-8);
+			backdrop-filter: blur(8px);
+		}
+		height: var(--header-height-with-bg);
+		transition: all 800ms var(--transition);
+		&.is-scrolled {
+			transform: translateY(0);
+			border-bottom-color: var(--gray-200);
+		}			
+	}
 	&-wrapper {
 		@include desktop {
 			flex-direction: column;

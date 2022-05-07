@@ -112,10 +112,10 @@
 
 	/*			GLOBAL VALUES		*/
 	--header-height: 90px;
-	--header-height-with-bg: 70px;
+	--header-height-with-bg: 60px;
 	@include tablet {
 		--header-height: 130px;
-		--header-height-with-bg: 80px;
+		--header-height-with-bg: 70px;
 	}
 	--border-radius: 8px;
 
