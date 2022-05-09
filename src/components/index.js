@@ -5,6 +5,7 @@ import Product from "components/global/Product";
 import Section from "components/global/Section";
 import Banner from "components/global/Banner";
 import ProductCarousel from "components/global/ProductCarousel";
+import Footer from "components/global/Footer";
 
 export {
   HeaderPrimary,
@@ -14,4 +15,5 @@ export {
   Section,
   Banner,
   ProductCarousel,
+  Footer,
 };
