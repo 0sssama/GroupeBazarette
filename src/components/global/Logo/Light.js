@@ -3,7 +3,7 @@ import Link from "next/link";
 function Light() {
   return (
     <Link href="/">
-      <a className="Logo Light">
+      <a className="Logo Light white">
         <p>
           GROUPE
           <span>BAZARETTE</span>

@@ -1,18 +1,25 @@
 .Logo {
+	&.Light {
+		p, span {
+			color: #fff!important;
+		}
+		p {
+			font-weight: 400!important;
+		}
+		span {
+			font-weight: 900!important;
+		}
+	}
 	p {
 		font-size: 1.25rem;
 		color: var(--main);
-		font-weight: 800;
+		font-weight: 900!important;
 		span {
 			color: var(--gray-900);
 			font-style: italic;
-		}
-		&.Light span {
-			color: #fff;
 		}
 		@include desktop {
 			font-size: 1.45rem;
 		}
 	}
-	text-decoration: none;
 }

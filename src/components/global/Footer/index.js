@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import { LogoLight } from "components";
 import { BsFacebook, BsTwitter, BsInstagram, BsYoutube } from "react-icons/bs";
 import Link from "next/link";
 import nav from "data/footerNav.json";
@@ -6,29 +6,31 @@ import nav from "data/footerNav.json";
 const socialMedia = [
   {
     icon: <BsFacebook />,
-    url: "https://www.facebook.com/pickmeupngr",
+    url: "/",
   },
   {
     icon: <BsTwitter />,
-    url: "https://twitter.com/pickmeupng",
+    url: "/",
   },
   {
     icon: <BsInstagram />,
-    url: "https://www.instagram.com/pickmeupng/",
+    url: "/",
   },
   {
     icon: <BsYoutube />,
-    url: "https://www.youtube.com/channel/UCqtPHk26hwUqFiBlshyYJUw",
+    url: "/",
   },
 ];
 
 function Footer() {
   return (
-    <footer className="Footer w-full flex items-center justify-center">
+    <footer className="Footer w-full flex flex-col items-center justify-center">
       <div className="Footer-wrapper wrapper flex items-start justify-between">
         <div className="flex flex-col items-start">
-          <Logo />
-          <p>The smartest way to move around in your city!</p>
+          <LogoLight />
+          <p className="footer-title">
+            The smartest way to move around in your city!
+          </p>
           <div className="Footer-sm flex items-center col-gap">
             <span>Follow us on</span>
             <div className="Footer-sm-icons flex items-center col-gap">
@@ -59,6 +61,19 @@ function Footer() {
               ))}
             </div>
           ))}
+        </div>
+      </div>
+      <div className="line w-full"></div>
+      <div className="Footer-bottom wrapper flex flex-col items-center row-gap col-gap justify-center">
+        <p>© 2022 Groupe Bazarette</p>
+        <div className="flex align-center col-gap">
+          <Link href="/">
+            <a className="white">Privacy Policy</a>
+          </Link>
+          <p>|</p>
+          <Link href="/">
+            <a className="white">Terms of Use</a>
+          </Link>
         </div>
       </div>
     </footer>
