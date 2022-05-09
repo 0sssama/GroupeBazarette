@@ -29,7 +29,7 @@ function Footer() {
         <div className="flex flex-col items-start">
           <LogoLight />
           <p className="footer-title">
-            The smartest way to move around in your city!
+            Optez pour notre style, qualité et prix!
           </p>
           <div className="Footer-sm flex items-center col-gap">
             <span>Follow us on</span>
