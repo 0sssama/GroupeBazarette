@@ -6,6 +6,8 @@ import Section from "components/global/Section";
 import Banner from "components/global/Banner";
 import ProductCarousel from "components/global/ProductCarousel";
 import Footer from "components/global/Footer";
+import LogoLight from "components/global/Logo/Light";
+import Logo from "components/global/Logo";
 
 export {
   HeaderPrimary,
@@ -16,4 +18,6 @@ export {
   Banner,
   ProductCarousel,
   Footer,
+  Logo,
+  LogoLight,
 };
