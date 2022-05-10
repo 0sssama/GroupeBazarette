@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Logo } from "components";
+import { AjouterForm } from "components/ajouter";
 import Head from "next/head";
 
 function Ajouter() {
@@ -24,6 +25,7 @@ function Ajouter() {
       </Head>
       <Logo />
       <h1 className="title primary">Ajouter un produit</h1>
+      <AjouterForm />
     </div>
   );
 }

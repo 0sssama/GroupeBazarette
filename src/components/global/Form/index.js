@@ -539,7 +539,7 @@ function Form({
               }`}
             />
           ))}
-          <div className="button-wrapper full">
+          <div className="button-wrapper full flex justify-end">
             <Button
               type={blackButton ? "dark" : "primary"}
               HTMLtype="submit"

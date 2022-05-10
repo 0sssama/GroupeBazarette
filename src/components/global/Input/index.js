@@ -1,7 +1,5 @@
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
-import { FaLocationArrow } from "react-icons/fa";
-import { getCurrentUserLocation } from "lib/location/getCurrentUserLocation";
 import Select from "react-select";
 
 function Label({ label, subLabel }) {
@@ -163,53 +161,6 @@ function Input({
             minLength={minLength}
             maxLength={maxLength}
           />
-          {error && <p className="input-error">{error}</p>}
-        </div>
-      );
-    case "pickup":
-      return (
-        <div className={`input pickup w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
-          <div className="with-location with-icon w-full">
-            <div className="get-location" onClick={getCurrentUserLocation}>
-              <FaLocationArrow />
-            </div>
-            <input
-              className={`w-full ${className} ${error ? "error" : ""}`}
-              type={HTMLtype}
-              placeholder={placeholder}
-              required={required}
-              name={name}
-              value={value}
-              onChange={onChange}
-              disabled={disabled}
-              ref={ref}
-              minLength={minLength}
-              maxLength={maxLength}
-            />
-          </div>
-          {error && <p className="input-error">{error}</p>}
-        </div>
-      );
-    case "destination":
-      return (
-        <div className={`input destination w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
-          <div className="with-destination with-icon w-full">
-            <input
-              className={`w-full ${className} ${error ? "error" : ""}`}
-              type={HTMLtype}
-              placeholder={placeholder}
-              required={required}
-              name={name}
-              value={value}
-              onChange={onChange}
-              disabled={disabled}
-              ref={ref}
-              minLength={minLength}
-              maxLength={maxLength}
-            />
-          </div>
           {error && <p className="input-error">{error}</p>}
         </div>
       );

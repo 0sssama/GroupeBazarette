@@ -83,8 +83,8 @@
 		width: 100%;
 		margin-bottom: 0.45rem;
 		.label {
-			font-size: 1rem;
-			font-weight: 500;
+			font-size: 0.925rem;
+			font-weight: 600;
 		}
 		.sub-label {
 			text-align: right;
@@ -94,12 +94,13 @@
 		}
 	}
 	&-error {
-		text-align:right;
+		text-align: right;
 		color: var(--danger);
 		margin-bottom: 0;
 		padding-bottom: 0;
 		font-size: 0.825rem;
 		margin-top: 3px;
+		font-weight: 500;
 	}
 }
 
