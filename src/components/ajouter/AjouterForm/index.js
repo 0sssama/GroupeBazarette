@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "components";
+import axios from "axios";
 
 function AjouterForm() {
   // formData
@@ -16,8 +17,24 @@ function AjouterForm() {
   // form submission
   const submitForm = () => {
     return new Promise((resolve, reject) => {
-      console.log(formData);
-      resolve();
+      const data = {
+        title: formData.title,
+        reference: formData.reference,
+        price: formData.price,
+        description: formData.description,
+        matiere: formData.matiere,
+        collection: formData.collection,
+        pictures: [[formData.mainPic, "main"]],
+      };
+      axios
+        .post("/api/product", data)
+        .then(() => {
+          resolve();
+        })
+        .catch((err) => {
+          console.log(err);
+          reject(err);
+        });
     });
   };
 
