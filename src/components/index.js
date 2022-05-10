@@ -8,6 +8,9 @@ import ProductCarousel from "components/global/ProductCarousel";
 import Footer from "components/global/Footer";
 import LogoLight from "components/global/Logo/Light";
 import Logo from "components/global/Logo";
+import Input from "components/global/Input";
+import Form from "components/global/Form";
+import Button from "components/global/Button";
 
 export {
   HeaderPrimary,
@@ -20,4 +23,7 @@ export {
   Footer,
   Logo,
   LogoLight,
+  Input,
+  Form,
+  Button,
 };
