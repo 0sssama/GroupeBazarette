@@ -6,31 +6,31 @@
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product.jpeg",
-				"slug": "92213141"
+				"slug": "1"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product2.jpeg",
-				"slug": "92213141"
+				"slug": "2"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product3.jpeg",
-				"slug": "92213141"
+				"slug": "3"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product4.jpeg",
-				"slug": "92213141"
+				"slug": "4"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product.jpeg",
-				"slug": "92213141"
+				"slug": "5"
 			}
 		]
 	},
@@ -41,31 +41,31 @@
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product5.jpeg",
-				"slug": "92213141"
+				"slug": "6"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product6.jpeg",
-				"slug": "92213141"
+				"slug": "7"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product7.jpeg",
-				"slug": "92213141"
+				"slug": "8"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product8.jpeg",
-				"slug": "92213141"
+				"slug": "9"
 			},
 			{
 				"name": "Produit Lunettes De Vue",
 				"price": "100",
 				"image": "/assets/placeholders/product5.jpeg",
-				"slug": "92213141"
+				"slug": "10"
 			}
 		]
 	}
