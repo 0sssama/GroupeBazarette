@@ -47,44 +47,22 @@
 	.checkbox {
 		padding: 1rem;
 	}
-	.with-icon {
-		input {
-			padding: 0.925rem 2.75rem;
-			padding-right: 1.15rem;
-			background-size: 18px;
-			background-repeat: no-repeat;
-			background-position: 1.05rem center;
-		}
-	}
-	.with-location {
-		position: relative;
-		.get-location {
-			position: absolute;
-			top: 0;
-			right: 0;
-			height: 100%;
-			padding: 1.05rem 1.15rem;
-			cursor: pointer;
-			opacity: 0.5;
-			transition: all 600ms var(--transition);
-			&:hover {
-				opacity: 0.9;
-			}
-		}
-		input {
-			background-image: url(/assets/marker.svg);
-		}
-	}
-	.with-destination input {
-		background-image: url(/assets/home.svg);
-		background-size: 16px;
+	.with-icon input {
+		padding: 0.925rem 2.75rem;
+		padding-right: 1.15rem;
+		background-size: 18px;
+		background-repeat: no-repeat;
+		background-position: 1.05rem center;
 	}
 	&-error, &-label{
 		width: 100%;
 		margin-bottom: 0.45rem;
-		.label {
+		.label, .required {
 			font-size: 0.925rem;
 			font-weight: 600;
+		}
+		.required {
+			color: var(--danger);
 		}
 		.sub-label {
 			text-align: right;

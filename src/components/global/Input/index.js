@@ -2,10 +2,13 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
 import Select from "react-select";
 
-function Label({ label, subLabel }) {
+function Label({ label, subLabel, required }) {
   return (
     <div className="input-label w-full flex items-center justify-between">
-      {label && <p className="label">{label}</p>}
+      <div className="flex items-center col-gap-s">
+        {required && <p className="required">*</p>}
+        {label && <p className="label">{label}</p>}
+      </div>
       {subLabel && <p className="sub-label">{subLabel}</p>}
     </div>
   );
@@ -73,7 +76,9 @@ function Input({
     case "textarea":
       return (
         <div className={`input w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
+          {(label || subLabel) && (
+            <Label label={label} subLabel={subLabel} required={required} />
+          )}
           <textarea
             className={`w-full ${className} ${error ? "error" : ""}`}
             type={HTMLtype}
@@ -93,7 +98,9 @@ function Input({
     case "select":
       return (
         <div className={`input w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
+          {(label || subLabel) && (
+            <Label label={label} subLabel={subLabel} required={required} />
+          )}
           <Select
             options={parsedOptions(options)}
             className={`react-select w-full ${className} ${
@@ -115,7 +122,9 @@ function Input({
     case "file":
       return (
         <div className={`input w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
+          {(label || subLabel) && (
+            <Label label={label} subLabel={subLabel} required={required} />
+          )}
           <input
             className={`w-full ${className} ${error ? "error" : ""}`}
             type="file"
@@ -147,7 +156,9 @@ function Input({
     case "phone":
       return (
         <div className={`input w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
+          {(label || subLabel) && (
+            <Label label={label} subLabel={subLabel} required={required} />
+          )}
           <PhoneInput
             className={`w-full ${className} ${error ? "error" : ""}`}
             country={"ng"}
@@ -167,7 +178,9 @@ function Input({
     case "date":
       return (
         <div className={`input w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
+          {(label || subLabel) && (
+            <Label label={label} subLabel={subLabel} required={required} />
+          )}
           <input
             className={`w-full ${className} ${error ? "error" : ""}`}
             type="date"
@@ -181,7 +194,9 @@ function Input({
     default:
       return (
         <div className={`input w-full ${classNameContainer}`}>
-          {(label || subLabel) && <Label label={label} subLabel={subLabel} />}
+          {(label || subLabel) && (
+            <Label label={label} subLabel={subLabel} required={required} />
+          )}
           <input
             className={`w-full ${className} ${error ? "error" : ""}`}
             type={HTMLtype}
