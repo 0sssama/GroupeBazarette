@@ -1,0 +1,30 @@
+.Pictures {
+	&-item {
+		&-image {
+			border-radius: var(--border-radius);
+			height: 150px;
+			width: 150px;
+			
+		}
+	}
+	&-add {
+		column-gap: 0.5rem;
+		@include desktop {
+			column-gap: 1.25rem;
+		}
+		.button {
+			padding-top: 1.5rem;
+		}
+		a {
+			display: block;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid var(--main);
+			&:hover {
+				border: 1px solid var(--main-light-600);
+			}
+		}
+	}
+}

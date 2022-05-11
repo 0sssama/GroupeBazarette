@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "components";
 import axios from "axios";
+import { OtherColors } from "components/ajouter";
 
 function AjouterForm() {
   // formData
@@ -12,6 +13,7 @@ function AjouterForm() {
     matiere: "",
     collection: "Vasco de Gama",
     mainPic: "",
+    pictures: [],
   });
 
   // form submission
@@ -47,7 +49,14 @@ function AjouterForm() {
         formData={formData}
         setFormData={setFormData}
         submit={submitForm}
-      />
+      >
+        <OtherColors
+          pictures={formData.pictures}
+          setPictures={(newValue) => {
+            setFormData({ ...formData, pictures: newValue });
+          }}
+        />
+      </Form>
     </div>
   );
 }

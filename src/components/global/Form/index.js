@@ -119,6 +119,7 @@ function Form({
   setFormData,
   messages,
   blackButton,
+  children,
 }) {
   const [error, setError] = useState({});
   const [submitting, setSubmitting] = useState(false);
@@ -539,6 +540,7 @@ function Form({
               }`}
             />
           ))}
+          {children}
           <div className="button-wrapper full flex justify-end">
             <Button
               type={blackButton ? "dark" : "primary"}
