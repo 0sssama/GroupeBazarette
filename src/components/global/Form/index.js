@@ -119,6 +119,8 @@ function Form({
   setFormData,
   messages,
   blackButton,
+  children,
+  reset,
 }) {
   const [error, setError] = useState({});
   const [submitting, setSubmitting] = useState(false);
@@ -146,28 +148,7 @@ function Form({
   };
 
   const resetForm = () => {
-    // reset values
-    setFormData((old) => {
-      // cloning old form data
-      let newForm = { ...old };
-      let keys = Object.keys(newForm);
-
-      // looping through each key
-      for (let i = 0; i < keys.length; i++) {
-        let type = typeOfInput(keys[i]);
-        if (!type) return old; // cancel if name is not in form array
-        if (type === "file") {
-          newForm[keys[i]] = null;
-        } else if (type === "select") {
-          newForm[keys[i]] = firstSelectItem(keys[i]) || "";
-        } else {
-          newForm[keys[i]] = "";
-        }
-      }
-
-      // everything went well
-      return newForm;
-    });
+    reset();
 
     // reset errors
     setError((old) => {
@@ -539,6 +520,7 @@ function Form({
               }`}
             />
           ))}
+          {children}
           <div className="button-wrapper full flex justify-end">
             <Button
               type={blackButton ? "dark" : "primary"}

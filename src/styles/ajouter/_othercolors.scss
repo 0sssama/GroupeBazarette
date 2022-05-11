@@ -1,0 +1,44 @@
+.Pictures {
+	&-item {
+		.remove-icon {
+			font-size: 1.75rem;
+			color: var(--danger);
+			cursor: pointer;
+		}
+		&-image {
+			--res: 40px;
+			@include desktop {
+				--res: 85px;
+			}
+			border-radius: var(--border-radius);
+			height: calc(var(--res) + 40px);
+			width: var(--res);
+			max-height: calc(var(--res) + 40px);
+			max-width: var(--res);
+			min-height: calc(var(--res) + 40px);
+			min-width: var(--res);
+			overflow: hidden;
+			margin-right: 1rem;
+		}
+	}
+	&-add {
+		column-gap: 0.5rem;
+		@include desktop {
+			column-gap: 1.25rem;
+		}
+		.button {
+			padding-top: 1.5rem;
+		}
+		a {
+			display: block;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid var(--main);
+			&:hover {
+				border: 1px solid var(--main-light-600);
+			}
+		}
+	}
+}
