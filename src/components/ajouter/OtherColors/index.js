@@ -1,4 +1,4 @@
-import { Button, Input } from "components";
+import { Input } from "components";
 import { useState } from "react";
 import { AiFillMinusCircle } from "react-icons/ai";
 
@@ -9,35 +9,38 @@ function OtherColors({ pictures, setPictures }) {
   });
   return (
     <div className="Pictures w-full full flex flex-col items-center padding-x">
-      {pictures.map((picture, index) => {
-        return index === 0 ? (
-          <></>
-        ) : (
-          <div className="Pictures-item w-full flex items-center justify-between">
-            <div
-              className="flex items-center cursor-pointer"
-              onClick={() =>
-                window.location.replace(`/assets/products/${products[0]}`)
-              }
-            >
-              <div className="Picture-item-image">
-                <img src={`/assets/products/${picture[0]}`} alt="" />
-              </div>
-              <p className="text">{picture[1]}</p>
+      {pictures.map((picture, index) => (
+        <div
+          className="Pictures-item w-full flex items-center justify-between"
+          key={index}
+        >
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() =>
+              window.location.replace(`/assets/products/${picture[0]}`)
+            }
+          >
+            <div className="Pictures-item-image">
+              <img
+                src={`/assets/products/${picture[0]}`}
+                alt=""
+                className="covered-img"
+              />
             </div>
-            <div
-              className="remove-icon"
-              onClick={() => {
-                const newPictures = [...pictures];
-                newPictures.splice(index, 1);
-                setPictures(newPictures);
-              }}
-            >
-              <AiFillMinusCircle />
-            </div>
+            <p className="text">{picture[1]}</p>
           </div>
-        );
-      })}
+          <div
+            className="remove-icon"
+            onClick={() => {
+              const newPictures = [...pictures];
+              newPictures.splice(index, 1);
+              setPictures(newPictures);
+            }}
+          >
+            <AiFillMinusCircle />
+          </div>
+        </div>
+      ))}
       <div className="Pictures-add w-full flex items-end justify-between">
         <Input
           type="text"
@@ -49,7 +52,6 @@ function OtherColors({ pictures, setPictures }) {
           onChange={(e) =>
             setNewPicture({ ...newPicture, url: e.target.value })
           }
-          required={true}
         />
         <Input
           type="text"
@@ -61,7 +63,6 @@ function OtherColors({ pictures, setPictures }) {
           onChange={(e) =>
             setNewPicture({ ...newPicture, color: e.target.value })
           }
-          required={true}
         />
         <div className="button w-full h-full">
           <a
@@ -70,8 +71,15 @@ function OtherColors({ pictures, setPictures }) {
             onClick={() => {
               if (newPicture.url.length <= 4 || newPicture.color.length <= 4)
                 return;
+              setPictures([
+                ...pictures,
+                [
+                  newPicture.url,
+                  newPicture.color.charAt(0).toUpperCase() +
+                    newPicture.color.slice(1),
+                ],
+              ]);
               setNewPicture({ url: "", color: "" });
-              setPictures([...pictures, [newPicture.url, newPicture.color]]);
             }}
           >
             + Ajouter couleur

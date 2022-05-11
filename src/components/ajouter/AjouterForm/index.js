@@ -16,6 +16,20 @@ function AjouterForm() {
     pictures: [],
   });
 
+  // form resetting
+  const resetForm = () => {
+    setFormData({
+      title: "",
+      reference: "",
+      price: 0,
+      description: "",
+      matiere: "",
+      collection: "Vasco de Gama",
+      mainPic: "",
+      pictures: [],
+    });
+  };
+
   // form submission
   const submitForm = () => {
     return new Promise((resolve, reject) => {
@@ -26,8 +40,9 @@ function AjouterForm() {
         description: formData.description,
         matiere: formData.matiere,
         collection: formData.collection,
-        pictures: [[formData.mainPic, "main"]],
+        pictures: [[formData.mainPic, "main"], ...formData.pictures],
       };
+      console.log(data);
       axios
         .post("/api/product", data)
         .then(() => {
@@ -49,6 +64,7 @@ function AjouterForm() {
         formData={formData}
         setFormData={setFormData}
         submit={submitForm}
+        reset={resetForm}
       >
         <OtherColors
           pictures={formData.pictures}
