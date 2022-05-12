@@ -69,7 +69,7 @@ function OtherColors({ pictures, setPictures }) {
             className="w-full no-line"
             href="#"
             onClick={() => {
-              if (newPicture.url.length <= 4 || newPicture.color.length <= 4)
+              if (newPicture.url.length <= 4 || newPicture.color.length <= 2)
                 return;
               setPictures([
                 ...pictures,

@@ -42,7 +42,6 @@ function AjouterForm() {
         collection: formData.collection,
         pictures: [[formData.mainPic, "main"], ...formData.pictures],
       };
-      console.log(data);
       axios
         .post("/api/product", data)
         .then(() => {
