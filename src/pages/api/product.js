@@ -1,13 +1,11 @@
 import Product from "models/Product";
-import dbConnect from "utils/dbConnect";
-
-dbConnect();
+import getProducts from "utils/getProducts";
 
 export default async function handler(req, res) {
   switch (req.method) {
     case "GET":
       try {
-        const products = await Product.find({});
+        const products = await getProducts();
 
         res.status(200).json({
           success: true,
