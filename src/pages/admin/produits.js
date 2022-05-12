@@ -4,6 +4,7 @@ import getProducts from "utils/getProducts";
 import { useEffect } from "react";
 
 function Produits({ products }) {
+  console.log(products);
   // remove header on page render
   useEffect(() => {
     // hiding both headers
@@ -26,8 +27,8 @@ function Produits({ products }) {
       <Logo />
       <h1 className="title primary">Produits</h1>
       <div className="Produits-grid">
-        {products.map((product) => (
-          <Product key={product.id} product={product} />
+        {products.map((product, key) => (
+          <Product key={key} data={product} />
         ))}
       </div>
     </div>
@@ -42,7 +43,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      products,
+      products: JSON.parse(JSON.stringify(products)),
     },
   };
 }

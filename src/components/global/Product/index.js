@@ -1,16 +1,21 @@
 import Link from "next/link";
 
 function Product({ data }) {
+  console.log(data);
   return (
-    <Link href={`/product/${data.slug}`}>
+    <Link href={`/product/${data?._id}`}>
       <a className="Product flex flex-col items-center row-gap no-line">
         <div className="Product-image">
-          <img src={data.image} alt="product" className="covered-img" />
+          <img
+            src={`/assets/products/${data?.pictures[0][0]}`}
+            alt="product"
+            className="covered-img"
+          />
         </div>
         <div className="Product-name">
-          <p>{data.name}</p>
+          <p>{data?.title}</p>
         </div>
-        <div className="Product-price">€{data.price}</div>
+        <div className="Product-price">€{data?.price}</div>
       </a>
     </Link>
   );
