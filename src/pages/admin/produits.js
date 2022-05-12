@@ -4,7 +4,6 @@ import getProducts from "utils/getProducts";
 import { useEffect } from "react";
 
 function Produits({ products }) {
-  console.log(products);
   // remove header on page render
   useEffect(() => {
     // hiding both headers
@@ -38,8 +37,6 @@ function Produits({ products }) {
 export async function getServerSideProps() {
   // get all products with getProducts and pass them as prop to the page
   const products = await getProducts();
-
-  console.log(products);
 
   return {
     props: {

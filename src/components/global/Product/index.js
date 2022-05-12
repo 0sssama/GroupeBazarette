@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 function Product({ data }) {
-  console.log(data);
   return (
     <Link href={`/product/${data?._id}`}>
       <a className="Product flex flex-col items-center row-gap no-line">
