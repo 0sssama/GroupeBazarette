@@ -8,3 +8,9 @@ export default async function getProducts() {
 
   return products;
 }
+
+export async function getProductById(id) {
+  const product = await Product.findById(id);
+
+  return product;
+}

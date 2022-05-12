@@ -74,7 +74,7 @@ function OtherColors({ pictures, setPictures }) {
               setPictures([
                 ...pictures,
                 [
-                  newPicture.url,
+                  newPicture.url.trim(),
                   newPicture.color.charAt(0).toUpperCase() +
                     newPicture.color.slice(1).toLowerCase(),
                 ],
