@@ -34,9 +34,11 @@ function Produits({ products }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // get all products with getProducts and pass them as prop to the page
   const products = await getProducts();
+
+  console.log(products);
 
   return {
     props: {

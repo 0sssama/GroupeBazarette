@@ -1,0 +1,9 @@
+.Produits {
+	&-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, var(--product-image-width));
+		grid-gap: 1rem;
+		justify-content: center;
+		width: 100%;
+	}
+}

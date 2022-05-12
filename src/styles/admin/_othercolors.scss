@@ -1,0 +1,49 @@
+.Pictures {
+	&-item {
+		.remove-icon {
+			font-size: 1.75rem;
+			color: var(--danger);
+			cursor: pointer;
+		}
+		&-image {
+			--res: 80px;
+			@include desktop {
+				--res: 125px;
+			}
+			border-radius: var(--border-radius);
+			height: var(--res);
+			width: var(--res);
+			max-height: var(--res);
+			max-width: var(--res);
+			min-height: var(--res);
+			min-width: var(--res);
+			overflow: hidden;
+			margin-right: 1rem;
+		}
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
+		border: 1px solid var(--gray-200);
+		border-radius: var(--border-radius);
+		padding: 0.5rem 1.5rem;
+	}
+	&-add {
+		column-gap: 0.5rem;
+		@include desktop {
+			column-gap: 1.25rem;
+		}
+		.button {
+			padding-top: 1.5rem;
+		}
+		a {
+			display: block;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid var(--main);
+			&:hover {
+				border: 1px solid var(--main-light-600);
+			}
+		}
+	}
+}

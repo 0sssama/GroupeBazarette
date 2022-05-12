@@ -1,11 +1,7 @@
 .Product {
 	&-image {
-		width: 200px;
-		height: 200px;
-		@include desktop {
-			width: 300px;
-			height: 300px;
-		}
+		width: var(--product-image-width);
+		height: var(--product-image-width);
 		box-shadow: 0 10px 45px rgba(0, 0, 0, 0.05);
 		border-radius: var(--border-radius);
 		overflow: hidden;
