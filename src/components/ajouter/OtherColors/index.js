@@ -76,7 +76,7 @@ function OtherColors({ pictures, setPictures }) {
                 [
                   newPicture.url,
                   newPicture.color.charAt(0).toUpperCase() +
-                    newPicture.color.slice(1),
+                    newPicture.color.slice(1).toLowerCase(),
                 ],
               ]);
               setNewPicture({ url: "", color: "" });
