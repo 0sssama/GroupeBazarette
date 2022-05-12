@@ -25,6 +25,10 @@ const ProductSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  collectionName: {
+    type: String,
+    required: true,
+  },
   pictures: {
     type: Array,
     required: true,
@@ -43,6 +47,7 @@ module.exports =
 		price: Number,
 		description: String (markdown),
 		matiere: String,
+    collectionName: String,
 		pictures: [
 			[link, color],
 			...

@@ -11,7 +11,7 @@ function AjouterForm() {
     price: 0,
     description: "",
     matiere: "",
-    collection: "Vasco de Gama",
+    collectionName: "Vasco de Gama",
     mainPic: "",
     pictures: [],
   });
@@ -24,7 +24,7 @@ function AjouterForm() {
       price: 0,
       description: "",
       matiere: "",
-      collection: "Vasco de Gama",
+      collectionName: "Vasco de Gama",
       mainPic: "",
       pictures: [],
     });
@@ -39,7 +39,7 @@ function AjouterForm() {
         price: formData.price,
         description: formData.description,
         matiere: formData.matiere,
-        collection: formData.collection,
+        collectionName: formData.collectionName,
         pictures: [[formData.mainPic, "main"], ...formData.pictures],
       };
       axios
@@ -146,7 +146,7 @@ const form = [
     maxLength: 40,
   },
   {
-    name: "collection",
+    name: "collectionName",
     label: "Collection:",
     HTMLtype: "select",
     type: "select",
