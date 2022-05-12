@@ -57,13 +57,15 @@
 				}
 			}
 		}
-		&-title {
-			p {
-				font-weight: 400;
-				text-transform: uppercase;
-			}
-			h1 {
-				text-transform: capitalize;
+		&-name {
+			&-title {
+				p {
+					font-weight: 400;
+					text-transform: uppercase;
+				}
+				h1 {
+					text-transform: capitalize;
+				}
 			}
 		}
 	}

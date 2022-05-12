@@ -70,6 +70,9 @@ function Product({ product }) {
             <p className="text">{product.collectionName}</p>
             <h1 className="title primary">{product.title}</h1>
           </div>
+          <div className="ProductPage-main-name-price w-full flex items-center justify-between">
+            <p className="title secondary"></p>
+          </div>
         </div>
       </div>
     </div>
