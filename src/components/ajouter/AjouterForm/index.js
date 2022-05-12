@@ -13,6 +13,7 @@ function AjouterForm() {
     matiere: "",
     collectionName: "Vasco de Gama",
     mainPic: "",
+    mainPicName: "",
     pictures: [],
   });
 
@@ -40,7 +41,10 @@ function AjouterForm() {
         description: formData.description,
         matiere: formData.matiere,
         collectionName: formData.collectionName,
-        pictures: [[formData.mainPic, "main"], ...formData.pictures],
+        pictures: [
+          [formData.mainPic, formData.mainPicName],
+          ...formData.pictures,
+        ],
       };
       axios
         .post("/api/product", data)
@@ -162,7 +166,14 @@ const form = [
     type: "text",
     placeholder: "Image principale *",
     required: true,
-    twoColumn: true,
+  },
+  {
+    name: "mainPicName",
+    label: "Couleur de l'image principale:",
+    HTMLtype: "text",
+    type: "text",
+    placeholder: "Couleur de l'image principale *",
+    required: true,
   },
 ];
 
