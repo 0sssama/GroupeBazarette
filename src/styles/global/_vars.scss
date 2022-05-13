@@ -152,8 +152,8 @@
 	--color-youtube: #FF0000;
 
 	// products image width
-	--product-image-width: 200px;
+	--product-image-width: 250px;
 	@include desktop {
-		--product-image-width: 300px;
+		--product-image-width: 400px;
 	}
 }

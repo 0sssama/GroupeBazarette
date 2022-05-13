@@ -12,7 +12,9 @@ function Product({ data }) {
           />
         </div>
         <div className="Product-name">
-          <p>{data?.title}</p>
+          <p>
+            {data?.title} - Ref. {data?.reference}
+          </p>
         </div>
         <div className="Product-price">€{data?.price}</div>
       </a>

@@ -2,8 +2,10 @@
 	&-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, var(--product-image-width));
-		grid-gap: 1rem;
+		grid-gap: 2rem;
 		justify-content: center;
 		width: 100%;
+		margin-bottom: 5rem;
+		margin-top: 3rem;
 	}
 }
