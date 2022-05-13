@@ -7,6 +7,7 @@ function AjouterForm() {
   // formData
   const [formData, setFormData] = useState({
     title: "",
+    type: "Lunettes de vue",
     reference: "",
     price: 0,
     description: "",
@@ -21,6 +22,7 @@ function AjouterForm() {
   const resetForm = () => {
     setFormData({
       title: "",
+      type: "Lunettes de vue",
       reference: "",
       price: 0,
       description: "",
@@ -36,6 +38,7 @@ function AjouterForm() {
     return new Promise((resolve, reject) => {
       const data = {
         title: formData.title,
+        type: formData.type,
         reference: formData.reference,
         price: formData.price,
         description: formData.description,
@@ -109,7 +112,14 @@ const form = [
     required: true,
     minLength: 2,
     maxLength: 50,
-    twoColumn: true,
+  },
+  {
+    name: "type",
+    label: "Type de produit:",
+    type: "select",
+    HTMLtype: "select",
+    options: ["Lunettes de vue", "Lunettes solaires"],
+    required: true,
   },
   {
     name: "reference",
@@ -155,9 +165,7 @@ const form = [
     HTMLtype: "select",
     type: "select",
     options: ["Vasco de Gama", "Antonio Ferre"],
-    minLength: 3,
     required: true,
-    maxLength: 20,
   },
   {
     name: "mainPic",

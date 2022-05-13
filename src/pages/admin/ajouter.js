@@ -9,7 +9,7 @@ function Ajouter() {
     // hiding both headers
     const headers = document.querySelectorAll(".Header");
     headers.forEach((header) => {
-      header.classList.add("display-none-important");
+      header.style.display = "none!important";
     });
 
     // hiding footer

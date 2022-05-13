@@ -6,6 +6,10 @@ const ProductSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  type: {
+    type: String,
+    required: true,
+  },
   reference: {
     type: String,
     required: true,
