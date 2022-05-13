@@ -22,7 +22,7 @@ export default function Home({ products }) {
               main: collection,
             }}
             products={products
-              .filter((product) => product.collection === collection)
+              .filter((product) => product.collectionName === collection)
               .slice(0, 10)}
             className="ProductCarousel"
           />

@@ -12,6 +12,7 @@
 			height: 450px;
 		}
 		.Products-wrapper {
+			column-gap: 1.5rem;
 			transition: transform 500ms var(--transition);
 		}
 	}

@@ -8,7 +8,7 @@ function ProductCarousel({ titles, products, className }) {
   const { width } = useRecoilValue(windowState);
 
   // width of product image
-  const productWidth = width > 768 ? 300 : 200;
+  const productWidth = width > 768 ? 400 : 250;
 
   // iteration count
   // const itCount = width > 768 ? 4 : 1;
