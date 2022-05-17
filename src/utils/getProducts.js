@@ -22,3 +22,11 @@ export async function getProductsByType(type) {
 
   return products;
 }
+
+export async function getProductsByCollection(collectionName) {
+  const products = await Product.find({
+    collectionName,
+  });
+
+  return products;
+}
