@@ -4,7 +4,6 @@ import collections from "data/collections.json";
 import getProducts from "utils/getProducts";
 
 export default function Home({ products }) {
-  console.log(products);
   return (
     <div className="Home Page wrapper">
       <Head>

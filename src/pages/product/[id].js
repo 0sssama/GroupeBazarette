@@ -65,7 +65,7 @@ function Product({ product }) {
             ))}
           </div>
         </div>
-        <div className="ProductPage-main-name">
+        <div className="ProductPage-main-name w-full padding-x">
           <div className="ProductPage-main-name-title w-full flex flex-col items-start row-gap-s">
             <p className="text">{product.collectionName}</p>
             <h1 className="title primary">{product.title}</h1>
