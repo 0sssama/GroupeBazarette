@@ -1,20 +1,17 @@
 import { useState } from "react";
 import getProducts, { getProductById } from "utils/getProducts";
-import {
-  BsChevronRight,
-  BsChevronLeft,
-  BsHeart,
-  BsHeartFill,
-  BsStarHalf,
-} from "react-icons/bs";
 import Head from "next/head";
+import {
+  ImageSection,
+  NameSection,
+  PriceSection,
+  ColorsSection,
+} from "components/product";
+import { Button } from "components";
 
 function Product({ product }) {
   // state of current image
   const [currentImage, setCurrentImage] = useState(0);
-
-  // state of like
-  const [liked, setLiked] = useState(false);
 
   return (
     <div className="ProductPage Page wrapper padding-x">
@@ -22,81 +19,23 @@ function Product({ product }) {
         <title>{product.title} - GroupeBazarette</title>
       </Head>
       <div className="ProductPage-main flex flex-col items-center w-full">
-        <div className="ProductPage-main-image flex flex-col items-center w-full">
-          <div className="ProductPage-main-image-main flex items-center justify-between w-full">
-            <div
-              className={`ProductPage-main-image-main-navigation previous ${
-                currentImage === 0 ? "disabled" : ""
-              }`}
-              onClick={() =>
-                setCurrentImage(currentImage === 0 ? 0 : currentImage - 1)
-              }
-            >
-              <BsChevronLeft />
-            </div>
-            <div className="ProductPage-main-image-main-image">
-              <img
-                src={`/assets/products/${product.pictures[currentImage][0]}`}
-                alt={product.title}
-                className="covered-img"
-              />
-            </div>
-            <div
-              className={`ProductPage-main-image-main-navigation next ${
-                currentImage === product.pictures.length - 1 ? "disabled" : ""
-              }`}
-              onClick={() =>
-                setCurrentImage(
-                  currentImage === product.pictures.length - 1
-                    ? currentImage
-                    : currentImage + 1
-                )
-              }
-            >
-              <BsChevronRight />
-            </div>
-          </div>
-          <div className="ProductPage-main-image-secondary flex items-center justify-start w-full">
-            {product.pictures.map((picture, i) => (
-              <div
-                key={i}
-                className={`ProductPage-main-image-secondary-image ${
-                  i === currentImage ? "active" : ""
-                }`}
-                onClick={() => setCurrentImage(i)}
-              >
-                <img
-                  src={`/assets/products/${picture[0]}`}
-                  alt={product.title}
-                  className="covered-img"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ImageSection
+          currentImage={currentImage}
+          setCurrentImage={setCurrentImage}
+          product={product}
+        />
         <div className="ProductPage-main-name w-full padding-x">
-          <div className="ProductPage-main-name-title w-full flex flex-col items-start row-gap-s">
-            <p className="text">
-              {product.collectionName} - {product.reference}
-            </p>
-            <h1 className="title primary">{product.title}</h1>
-          </div>
-          <div className="ProductPage-main-name-price w-full flex items-center justify-between">
-            <p className="title tertiary">€{product.price}</p>
-            <div className="icons flex items-end justify-end">
-              <div
-                className="icon flex flex-col items-center"
-                onClick={() => setLiked(!liked)}
-              >
-                {liked ? <BsHeartFill /> : <BsHeart />}
-                <p className="text">{liked ? 130 : 129}</p>
-              </div>
-              <div className="icon flex flex-col items-center review">
-                <BsStarHalf />
-                <p className="text">Review</p>
-              </div>
-            </div>
-          </div>
+          <NameSection
+            collection={product.collectionName}
+            reference={product.reference}
+            title={product.title}
+          />
+          <PriceSection price={product.price} />
+          <ColorsSection
+            colors={product.pictures}
+            currentImage={currentImage}
+            setCurrentImage={setCurrentImage}
+          />
         </div>
       </div>
     </div>

@@ -7,8 +7,9 @@
 			column-gap: 1.5rem;
 		}
 		&-image {
+			overflow: hidden;
 			@include desktop {
-				max-width: 60%;
+				max-width: 70%;
 			}
 			&-main {
 				&-navigation {
@@ -37,9 +38,9 @@
 				}
 				height: var(--secondary-image-resolution);
 				width: 100%;
-				overflow: hidden;
 				margin-top: 2rem;
 				padding: 0 2.25rem;
+				transition: all 500ms var(--transition);
 				@include desktop {
 					padding: 0 2.45rem;
 				}
@@ -105,6 +106,43 @@
 							color: var(--gray-900);
 							font-weight: 500;
 							font-size: 0.725rem;
+						}
+					}
+				}
+			}
+			&-colors {
+				--color-width: 6rem;
+				@include desktop {
+					--color-width: 6rem;
+				}
+				display: grid;
+				grid-template-columns: repeat(auto-fit, var(--color-width));
+				grid-template-rows: auto;
+				grid-gap: 0.75rem;
+				margin-top: 1.25rem;
+				&-color {
+					padding: 0.5rem;
+					border: 1px solid var(--gray-400);
+					border-radius: var(--border-radius);
+					cursor: pointer;
+					transition: all 500ms var(--transition);
+					img {
+						max-width: 100%;
+						margin-bottom: 0.5rem;
+						border-radius: var(--border-radius);
+					}
+					p.text {
+						text-align: center;
+						font-size: 0.725rem;
+					}
+					&.active, &:hover {
+						border-color: var(--main-light-800);
+						box-shadow: 1px 0px 5px var(--main-light-200);
+					}
+					@include desktop {
+						padding: 0.5rem;
+						img {
+							max-width: 100%;
 						}
 					}
 				}
