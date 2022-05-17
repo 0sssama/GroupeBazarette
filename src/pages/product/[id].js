@@ -36,6 +36,13 @@ function Product({ product }) {
             currentImage={currentImage}
             setCurrentImage={setCurrentImage}
           />
+          <div className="button-wrapper w-full">
+            <Button type="primary" className="w-full" onClick={() => {
+              console.log("rigl")
+            }}>
+              ACHETER MAINTENANT
+            </Button>
+          </div>
         </div>
       </div>
     </div>
