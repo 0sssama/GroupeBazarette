@@ -1,11 +1,20 @@
 import { useState } from "react";
 import getProducts, { getProductById } from "utils/getProducts";
-import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+import {
+  BsChevronRight,
+  BsChevronLeft,
+  BsHeart,
+  BsHeartFill,
+  BsStarHalf,
+} from "react-icons/bs";
 import Head from "next/head";
 
 function Product({ product }) {
   // state of current image
   const [currentImage, setCurrentImage] = useState(0);
+
+  // state of like
+  const [liked, setLiked] = useState(false);
 
   return (
     <div className="ProductPage Page wrapper padding-x">
@@ -67,11 +76,26 @@ function Product({ product }) {
         </div>
         <div className="ProductPage-main-name w-full padding-x">
           <div className="ProductPage-main-name-title w-full flex flex-col items-start row-gap-s">
-            <p className="text">{product.collectionName}</p>
+            <p className="text">
+              {product.collectionName} - {product.reference}
+            </p>
             <h1 className="title primary">{product.title}</h1>
           </div>
           <div className="ProductPage-main-name-price w-full flex items-center justify-between">
-            <p className="title secondary"></p>
+            <p className="title tertiary">€{product.price}</p>
+            <div className="icons flex items-end justify-end">
+              <div
+                className="icon flex flex-col items-center"
+                onClick={() => setLiked(!liked)}
+              >
+                {liked ? <BsHeartFill /> : <BsHeart />}
+                <p className="text">{liked ? 130 : 129}</p>
+              </div>
+              <div className="icon flex flex-col items-center review">
+                <BsStarHalf />
+                <p className="text">Review</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
