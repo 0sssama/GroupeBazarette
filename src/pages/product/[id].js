@@ -6,10 +6,16 @@ import {
   NameSection,
   PriceSection,
   ColorsSection,
+  Description,
 } from "components/product";
 import { Button } from "components";
+import { useRecoilValue } from "recoil";
+import { windowState } from "atoms/states";
 
 function Product({ product }) {
+  // global state of width
+  const { width } = useRecoilValue(windowState);
+
   // state of current image
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -37,13 +43,25 @@ function Product({ product }) {
             setCurrentImage={setCurrentImage}
           />
           <div className="button-wrapper w-full">
-            <Button type="primary" className="w-full" onClick={() => {
-              console.log("rigl")
-            }}>
+            <Button
+              type="primary"
+              className="w-full"
+              onClick={() => {
+                console.log("rigl");
+              }}
+            >
               ACHETER MAINTENANT
             </Button>
           </div>
         </div>
+      </div>
+      <div className="ProductPage-description w-full Section">
+        <Description
+          title={product.title}
+          description={product.description}
+          colors={product.pictures}
+          matiere={product.matiere}
+        />
       </div>
     </div>
   );
