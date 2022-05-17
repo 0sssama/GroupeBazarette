@@ -162,6 +162,9 @@
 				flex-direction: column;
 				align-items: flex-start;
 			}
+			&.no-margin {
+				margin: 0;
+			}
 			span {
 				color: var(--main);
 				font-family: Sora;
@@ -174,6 +177,11 @@
 				@include notDesktop {
 					display: none;
 				}
+			}
+		}
+		.Recommended, .FromCollection {
+			.Section {
+				margin-top: 2rem;
 			}
 		}
 	}

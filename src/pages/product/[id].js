@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import getProducts, { getProductById } from "utils/getProducts";
 import Head from "next/head";
 import {
@@ -7,15 +7,22 @@ import {
   PriceSection,
   ColorsSection,
   Description,
+  Recommended,
+  FromCollection,
 } from "components/product";
 import { Button } from "components";
-import { useRecoilValue } from "recoil";
-import { windowState } from "atoms/states";
 
-function Product({ product }) {
-  // global state of width
-  const { width } = useRecoilValue(windowState);
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
 
+function Product({ product, products, shuffledProducts }) {
   // state of current image
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -62,6 +69,12 @@ function Product({ product }) {
           colors={product.pictures}
           matiere={product.matiere}
         />
+        <Recommended products={shuffledProducts.slice(0, 10)} />
+        <FromCollection
+          products={products
+            .filter((p) => p.collectionName === product.collectionName)
+            .slice(0, 10)}
+        />
       </div>
     </div>
   );
@@ -72,11 +85,13 @@ export default Product;
 // get all products with getProducts and return their ids as static paths
 export async function getStaticPaths() {
   const products = await getProducts();
+
   const paths = products.map((product) => ({
     params: {
       id: product._id.toString(),
     },
   }));
+
   return {
     paths,
     fallback: false,
@@ -86,9 +101,13 @@ export async function getStaticPaths() {
 // get product by id with getProductById and return it as a static prop
 export async function getStaticProps({ params }) {
   const product = await getProductById(params.id);
+  const products = await getProducts();
+
   return {
     props: {
       product: JSON.parse(JSON.stringify(product)),
+      products: JSON.parse(JSON.stringify(products)),
+      shuffledProducts: shuffleArray(JSON.parse(JSON.stringify(products))),
     },
   };
 }
