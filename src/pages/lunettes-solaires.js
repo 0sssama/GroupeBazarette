@@ -1,6 +1,6 @@
 import { Product } from "components";
 import Head from "next/head";
-import getProductsByType from "utils/getProducts";
+import { getProductsByType } from "utils/getProducts";
 
 function LunettesSolaires({ products }) {
   return (
@@ -13,6 +13,17 @@ function LunettesSolaires({ products }) {
         {products.map((product, key) => (
           <Product key={key} data={product} />
         ))}
+        {products.length === 0 && (
+          <div className="Produits-grid-empty text-center flex flex-col items-center row-gap">
+            <h2 className="title tertiary text-center">Aucun produit trouvé</h2>
+            <Button type="primary" onClick={() => router.push("/")}>
+              <span className="back">
+                <MdArrowBack />
+              </span>
+              Retour à la page d'accueil
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

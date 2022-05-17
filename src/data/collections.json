@@ -1,1 +1,10 @@
-[ "Vasco de Gama", "Antonio Ferre" ]
+[
+	{
+		"name": "Vasco de Gama",
+		"link": "/vasco-de-gama"
+	},
+	{
+		"name": "Antonio Ferre",
+		"link": "/antonio-ferre"
+}
+]

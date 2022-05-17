@@ -18,7 +18,7 @@ export async function getProductById(id) {
 export async function getProductsByType(type) {
   const products = await Product.find({
     type,
-  }).exec();
+  });
 
   return products;
 }

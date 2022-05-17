@@ -1,9 +1,11 @@
 import { windowState } from "atoms/states";
 import { Section, Carousel, Product } from "components";
+import Link from "next/link";
 import { useState } from "react";
+import { MdArrowForward } from "react-icons/md";
 import { useRecoilValue } from "recoil";
 
-function ProductCarousel({ titles, products, className }) {
+function ProductCarousel({ titles, products, className, link }) {
   // get width of screen
   const { width } = useRecoilValue(windowState);
 
@@ -52,6 +54,16 @@ function ProductCarousel({ titles, products, className }) {
           ))}
         </div>
       </Carousel>
+      {link && (
+        <div className="Discover w-full flex justify-end items-center">
+          <Link href={link}>
+            <a className="Discover-link flex items-center col-gap-s with-line">
+              Découvrir plus
+              <MdArrowForward />
+            </a>
+          </Link>
+        </div>
+      )}
     </Section>
   );
 }

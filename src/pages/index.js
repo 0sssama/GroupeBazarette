@@ -18,12 +18,13 @@ export default function Home({ products }) {
             key={index}
             titles={{
               sub: "Collection —",
-              main: collection,
+              main: collection.name,
             }}
             products={products
-              .filter((product) => product.collectionName === collection)
+              .filter((product) => product.collectionName === collection.name)
               .slice(0, 10)}
             className="ProductCarousel"
+            link={collection.link}
           />
         ))}
       </div>
