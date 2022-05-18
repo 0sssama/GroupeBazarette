@@ -161,7 +161,7 @@ function Input({
           )}
           <PhoneInput
             className={`w-full ${className} ${error ? "error" : ""}`}
-            country={"ng"}
+            country={"fr"}
             placeholder={placeholder}
             required={required}
             name={name}
