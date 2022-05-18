@@ -14,5 +14,9 @@
 	{
 		"title": "NOUVEAUTÉS",
 		"url": "/"
+	},
+	{
+		"title": "CONTACT",
+		"url": "/contact"
 	}
 ]

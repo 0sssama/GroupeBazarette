@@ -7,7 +7,7 @@ function Item({ title, url }) {
       <a className="no-line">
         <div className="Header-nav-item flex items-center col-gap-s">
           <p>{title}</p>
-          <FiChevronDown />
+          {/* <FiChevronDown /> */}
         </div>
       </a>
     </Link>
