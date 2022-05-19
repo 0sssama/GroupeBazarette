@@ -1,80 +1,43 @@
 [
 	{
-		"title": "Products",
+		"title": "À propos",
 		"links": [
 			{
-				"title": "Ride with us",
-				"url": "https://customer.pickmeup.ng/"
-			},
-			{
-				"title": "Become a driver",
-				"url": "/driver"
-			},
-			{
-				"title": "Fleets",
-				"url": "/fleets"
-			},
-			{
-				"title": "Business",
-				"url": "/business"
-			},
-			{
-				"title": "Franchise",
-				"url": "/franchise"
-			},
-			{
-				"title": "Dispatcher",
-				"url": "/dispatcher"
-			}
-		]
-	},
-	{
-		"title": "Resources",
-		"links": [
-			{
-				"title": "Offers",
+				"title": "Qui sommes nous?",
 				"url": "/"
 			},
 			{
-				"title": "Support",
-				"url": "/support"
-			},
-			{
-				"title": "Events",
+				"title": "Mentions légales",
 				"url": "/"
 			},
 			{
-				"title": "Safety",
+				"title": "Droit de rétractation",
 				"url": "/"
 			},
 			{
-				"title": "Airports",
+				"title": "Protection des données",
+				"url": "/"
+			},
+			{
+				"title": "Cookies",
 				"url": "/"
 			}
 		]
 	},
 	{
-		"title": "Company",
+		"title": "Support",
 		"links": [
 			{
-				"title": "About us",
-				"url": "/about"
-			},
-			{
-				"title": "Cities",
-				"url": "/cities"
-			},
-			{
-				"title": "Blog",
-				"url": "/blog"
-			},
-			{
-				"title": "Careers",
-				"url": "/careers"
-			},
-			{
-				"title": "Influencers",
+				"title": "Conditions générales de vente",
 				"url": "/"
+			},
+			{
+				"title": "FAQ",
+				"url": "/"
+			},
+			{
+				"title": "Contactez-nous",
+				"url": "/contact"
 			}
 		]
 	}
