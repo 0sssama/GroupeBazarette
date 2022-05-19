@@ -29,6 +29,11 @@ const ProductSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  gender: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   collectionName: {
     type: String,
     required: true,
