@@ -32,7 +32,7 @@ function Footer() {
             Optez pour notre style, qualité et prix!
           </p>
           <div className="Footer-sm flex items-center col-gap">
-            <span>Follow us on</span>
+            <span>Suivez-nous sur</span>
             <div className="Footer-sm-icons flex items-center col-gap">
               {socialMedia.map((item, i) => (
                 <a
