@@ -15,6 +15,7 @@ function AjouterForm() {
     collectionName: "Vasco de Gama",
     mainPic: "",
     mainPicName: "",
+    gender: "Homme",
     pictures: [],
   });
 
@@ -29,6 +30,8 @@ function AjouterForm() {
       matiere: "",
       collectionName: "Vasco de Gama",
       mainPic: "",
+      mainPicName: "",
+      gender: "Homme",
       pictures: [],
     });
   };
@@ -44,6 +47,7 @@ function AjouterForm() {
         description: formData.description,
         matiere: formData.matiere,
         collectionName: formData.collectionName,
+        gender: formData.gender,
         pictures: [
           [formData.mainPic, formData.mainPicName],
           ...formData.pictures,
@@ -112,6 +116,7 @@ const form = [
     required: true,
     minLength: 2,
     maxLength: 50,
+    twoColumn: true,
   },
   {
     name: "type",
@@ -119,6 +124,14 @@ const form = [
     type: "select",
     HTMLtype: "select",
     options: ["Lunettes de vue", "Lunettes solaires"],
+    required: true,
+  },
+  {
+    name: "gender",
+    label: "Genre:",
+    type: "select",
+    HTMLtype: "select",
+    options: ["Homme", "Femme"],
     required: true,
   },
   {
@@ -142,7 +155,7 @@ const form = [
   {
     name: "description",
     label: "Description:",
-    type: "description",
+    type: "textarea",
     placeholder: "Description *",
     minLength: 8,
     maxLength: 1000,
