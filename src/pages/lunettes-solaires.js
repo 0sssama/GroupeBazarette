@@ -1,6 +1,7 @@
 import { Product, Button } from "components";
 import Head from "next/head";
 import { getProductsByType } from "utils/getProducts";
+import { MdArrowBack } from "react-icons/md";
 
 function LunettesSolaires({ products }) {
   return (
