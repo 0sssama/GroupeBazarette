@@ -45,6 +45,12 @@
 			p {
 				font-weight: 600;
 				font-size: .825rem;
+				&.search-nav {
+					line-height: 0;
+					svg {
+						font-size: 1.25rem!important;
+					}
+				}
 			}
 			svg {
 				font-size: 1rem;

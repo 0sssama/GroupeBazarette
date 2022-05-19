@@ -18,5 +18,9 @@
 	{
 		"title": "CONTACT",
 		"url": "/contact"
+	},
+	{
+		"title": "SEARCH",
+		"url": "/search"
 	}
 ]
