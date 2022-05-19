@@ -1,4 +1,4 @@
-import { Product } from "components";
+import { Product, Button } from "components";
 import Head from "next/head";
 import { getProductsByType } from "utils/getProducts";
 
