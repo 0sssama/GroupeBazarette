@@ -1,0 +1,15 @@
+.Search {
+	&-Header {
+		.input {
+			margin-top: 3rem;
+			width: 100%;
+			@include desktop {
+				width: 60%;
+				max-width: 60%;
+			}
+		}
+	}
+	.Produits-grid {
+		margin-top: 8rem!important;
+	}
+}

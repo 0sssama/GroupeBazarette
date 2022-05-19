@@ -43,6 +43,17 @@
 			margin-top: 0.25rem;
 			font-size: 1rem;
 		}
+		&.search-input {
+			padding-left: 3rem;
+			background-image: url(/assets/search.png);
+			background-position: 1rem center;
+			background-repeat: no-repeat;
+			background-size: 1rem;
+			&:focus {
+				padding-left: 1.15rem;
+				background-image: none;
+			}
+		}
 	}
 	.checkbox {
 		padding: 1rem;
