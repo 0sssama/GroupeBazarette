@@ -46,7 +46,7 @@ function OtherColors({ pictures, setPictures }) {
           type="text"
           label="Image de la nouvelle couleur (ex. IMG_2312.jpg)"
           placeholder="URL de l'image *"
-          minLength={4}
+          minLength={2}
           maxLength={255}
           value={newPicture.url}
           onChange={(e) =>
@@ -57,7 +57,7 @@ function OtherColors({ pictures, setPictures }) {
           type="text"
           label="Nom de la nouvelle couleur"
           placeholder="Nom de la nouvelle couleur *"
-          minLength={4}
+          minLength={2}
           maxLength={255}
           value={newPicture.color}
           onChange={(e) =>
