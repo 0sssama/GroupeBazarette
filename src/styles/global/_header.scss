@@ -2,10 +2,8 @@
 	z-index: 1337;
 	height: var(--header-height);
 	&-Secondary {
-		.Header {
-			&-logo a p {
-				font-size: 1.25rem!important;
-			}
+		.Header-logo a p {
+			font-size: 1.25rem!important;
 		}
 		transform: translateY(calc(-1 * var(--header-height-with-bg)));
 		border-bottom: 1px solid transparent;

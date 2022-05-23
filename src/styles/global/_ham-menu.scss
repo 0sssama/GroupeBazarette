@@ -1,0 +1,7 @@
+.HamMenu {
+	top: var(--header-height);
+	transition: all 800ms var(--transition);
+	&.scrolled {
+		top: var(--header-height-with-bg);
+	}
+}
