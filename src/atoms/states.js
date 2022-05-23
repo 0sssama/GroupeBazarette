@@ -15,3 +15,8 @@ export const windowState = atom({
     scroll: 0,
   },
 });
+
+export const menuState = atom({
+  key: "menuState",
+  default: false,
+});
