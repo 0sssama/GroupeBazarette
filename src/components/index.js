@@ -11,6 +11,7 @@ import Logo from "components/global/Logo";
 import Input from "components/global/Input";
 import Form from "components/global/Form";
 import Button from "components/global/Button";
+import HamMenu from "components/global/HamMenu";
 
 export {
   HeaderPrimary,
@@ -26,4 +27,5 @@ export {
   Input,
   Form,
   Button,
+  HamMenu,
 };

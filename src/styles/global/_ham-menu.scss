@@ -1,7 +1,51 @@
 .HamMenu {
+	position: fixed;
 	top: var(--header-height);
-	transition: all 800ms var(--transition);
+	left: 0;
+	right: 0;
+	height: 0;
+	overflow: hidden;
+	transition: all	600ms	var(--transition);
+	background-color: #fff;
+	z-index: 4007;
+	&.open {
+		padding: 0.5rem 0;
+		height: 21.5rem;
+	}
 	&.scrolled {
 		top: var(--header-height-with-bg);
+		background-color: var(--white-opacity-9);
+		border-bottom-color: var(--gray-200);
+		@supports (backdrop-filter: blur(8px)) {
+			background-color: var(--white-opacity-8);
+			backdrop-filter: blur(8px);
+		}
+		box-shadow: var(--shadow-2xl);
+	}
+	&-Nav {
+		.search-nav {
+			&, svg {
+				font-size: 1.05rem;
+				line-height: 0;
+			}
+		}
+		.nav li {
+			height: 3.5rem;
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			border-bottom: 1px solid var(--gray-100);
+			a {
+				width: 100%;
+				height: 100%;
+				padding: 1rem var(--padding-x);
+				transition: all 500ms var(--transition);
+				font-size: 0.875rem;
+				&:hover {
+					background-color: var(--gray-50);
+				}
+			}
+		}
 	}
 }
