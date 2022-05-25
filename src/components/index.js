@@ -13,6 +13,7 @@ import Form from "components/global/Form";
 import Button from "components/global/Button";
 import HamMenu from "components/global/HamMenu";
 import SortMenu from "components/global/SortMenu";
+import ProductEdit from "components/global/Product/Edit";
 
 export {
   HeaderPrimary,
@@ -30,4 +31,5 @@ export {
   Button,
   HamMenu,
   SortMenu,
+  ProductEdit,
 };

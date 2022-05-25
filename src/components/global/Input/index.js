@@ -103,6 +103,10 @@ function Input({
           )}
           <Select
             options={parsedOptions(options)}
+            value={{
+              value: value.toLowerCase(),
+              label: value,
+            }}
             className={`react-select w-full ${className} ${
               error ? "error" : ""
             }`}
