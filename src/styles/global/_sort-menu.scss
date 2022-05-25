@@ -1,0 +1,14 @@
+.SortMenu {
+	.text {
+		color: var(--main);
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+	&-wrap {
+		button {
+			padding: 0.5rem 1rem;
+			border-radius: 1rem;
+			font-size: 0.825rem;
+		}
+	}
+}

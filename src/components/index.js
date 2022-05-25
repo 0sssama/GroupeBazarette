@@ -12,6 +12,7 @@ import Input from "components/global/Input";
 import Form from "components/global/Form";
 import Button from "components/global/Button";
 import HamMenu from "components/global/HamMenu";
+import SortMenu from "components/global/SortMenu";
 
 export {
   HeaderPrimary,
@@ -28,4 +29,5 @@ export {
   Form,
   Button,
   HamMenu,
+  SortMenu,
 };
