@@ -54,10 +54,7 @@ function Produits({ products }) {
           <ProductEdit
             key={key}
             data={product}
-            onEditClick={() => {
-              console.log("modifier");
-              setCurrentlyEdited(product);
-            }}
+            onEditClick={() => setCurrentlyEdited(product)}
           />
         ))}
         {visibleProducts.length === 0 && (
