@@ -3,8 +3,12 @@ import axios from "axios";
 import { Form, Button } from "components";
 import { OtherColors } from "components/ajouter";
 import { MdOutlineClose } from "react-icons/md";
+import { useRouter } from "next/router";
 
 function EditModal({ product, onClose }) {
+  // next.js router
+  const router = useRouter();
+
   // formData
   const [formData, setFormData] = useState({
     title: product.title,
@@ -41,23 +45,27 @@ function EditModal({ product, onClose }) {
   const submitForm = () => {
     return new Promise((resolve, reject) => {
       const data = {
-        title: formData.title,
-        type: formData.type,
-        reference: formData.reference,
-        price: formData.price,
-        description: formData.description,
-        matiere: formData.matiere,
-        collectionName: formData.collectionName,
-        gender: formData.gender,
-        pictures: [
-          [formData.mainPic, formData.mainPicName],
-          ...formData.pictures,
-        ],
+        id: product._id,
+        body: {
+          title: formData.title,
+          type: formData.type,
+          reference: formData.reference,
+          price: formData.price,
+          description: formData.description,
+          matiere: formData.matiere,
+          collectionName: formData.collectionName,
+          gender: formData.gender,
+          pictures: [
+            [formData.mainPic, formData.mainPicName],
+            ...formData.pictures,
+          ],
+        },
       };
       axios
-        .put(`/api/product/${product._id}`, data)
+        .put("/api/product", data)
         .then(() => {
           onClose();
+          router.reload();
           resolve();
         })
         .catch((err) => {

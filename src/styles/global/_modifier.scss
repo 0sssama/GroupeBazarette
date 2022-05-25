@@ -6,7 +6,10 @@
 		border-radius: var(--border-radius);
 		box-shadow: var(--shadow-xl);
 		padding: 1.25rem 1.5rem;
-		max-width: 60%;
+		max-width: 90%;
+		@include desktop {
+			max-width: 60%;
+		}
 		max-height: 90%;
 		overflow-y: scroll;
 		overflow-x: hidden;
