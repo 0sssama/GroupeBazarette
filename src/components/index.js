@@ -14,6 +14,7 @@ import Button from "components/global/Button";
 import HamMenu from "components/global/HamMenu";
 import SortMenu from "components/global/SortMenu";
 import ProductEdit from "components/global/Product/Edit";
+import FullScreen from "components/global/FullScreen";
 
 export {
   HeaderPrimary,
@@ -32,4 +33,5 @@ export {
   HamMenu,
   SortMenu,
   ProductEdit,
+  FullScreen,
 };

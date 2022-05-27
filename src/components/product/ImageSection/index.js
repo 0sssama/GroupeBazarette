@@ -1,11 +1,14 @@
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
-import { useRecoilValue } from "recoil";
-import { windowState } from "atoms/states";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { windowState, fullSreenState } from "atoms/states";
 import { AiOutlineFullscreen } from "react-icons/ai";
 
 function ImageSection({ setCurrentImage, currentImage, product }) {
   // get global state of width
   const { width } = useRecoilValue(windowState);
+
+  // get global state of width
+  const setFs = useSetRecoilState(fullSreenState);
 
   // widgth of secondary image
   const secondaryWidth = width > 768 ? 70 : 50;
@@ -24,7 +27,12 @@ function ImageSection({ setCurrentImage, currentImage, product }) {
           <BsChevronLeft />
         </div>
         <div className="ProductPage-main-image-main-image relative">
-          <div className="ProductPage-main-image-main-image-fullscreen cursor-pointer absolute">
+          <div
+            className="ProductPage-main-image-main-image-fullscreen cursor-pointer absolute"
+            onClick={() => {
+              setFs({ active: true, image: product.pictures[currentImage][0] });
+            }}
+          >
             <AiOutlineFullscreen />
           </div>
           <img
