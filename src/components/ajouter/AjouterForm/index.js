@@ -81,6 +81,12 @@ function AjouterForm() {
           setPictures={(newValue) => {
             setFormData({ ...formData, pictures: newValue });
           }}
+          setNewColorName={(index, newValue) => {
+            const newPictures = [...formData.pictures];
+
+            newPictures[index][1] = newValue;
+            setFormData({ ...formData, pictures: newPictures });
+          }}
         />
       </Form>
     </div>

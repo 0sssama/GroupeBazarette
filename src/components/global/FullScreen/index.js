@@ -1,10 +1,10 @@
 import { useRecoilState } from "recoil";
-import { fullSreenState } from "atoms/states";
+import { fullScreenState } from "atoms/states";
 import { MdOutlineClose } from "react-icons/md";
 
 function FullScreen() {
   // importing current state of fullscreen
-  const [fs, setFs] = useRecoilState(fullSreenState);
+  const [fs, setFs] = useRecoilState(fullScreenState);
 
   // if fullscreen is active
   if (!fs.active) return null;

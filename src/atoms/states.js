@@ -21,8 +21,8 @@ export const menuState = atom({
   default: false,
 });
 
-export const fullSreenState = atom({
-  key: "fullSreenState",
+export const fullScreenState = atom({
+  key: "fullScreenState",
   default: {
     active: false,
     image: "",

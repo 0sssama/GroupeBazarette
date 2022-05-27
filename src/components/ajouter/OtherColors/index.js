@@ -1,12 +1,17 @@
 import { Input } from "components";
 import { useState } from "react";
 import { AiFillMinusCircle } from "react-icons/ai";
+import { fullScreenState } from "atoms/states";
+import { useSetRecoilState } from "recoil";
 
-function OtherColors({ pictures, setPictures }) {
+function OtherColors({ pictures, setPictures, setNewColorName }) {
   const [newPicture, setNewPicture] = useState({
     url: "",
     color: "",
   });
+
+  const setFullScreen = useSetRecoilState(fullScreenState);
+
   return (
     <div className="Pictures w-full full flex flex-col items-center padding-x">
       {pictures.map((picture, index) => (
@@ -14,20 +19,30 @@ function OtherColors({ pictures, setPictures }) {
           className="Pictures-item w-full flex items-center justify-between"
           key={index}
         >
-          <div
-            className="flex items-center cursor-pointer"
-            onClick={() =>
-              window.location.replace(`/assets/products/${picture[0]}`)
-            }
-          >
-            <div className="Pictures-item-image">
+          <div className="flex items-center cursor-pointer">
+            <div
+              className="Pictures-item-image"
+              onClick={() =>
+                setFullScreen({
+                  active: true,
+                  image: `${picture[0]}`,
+                })
+              }
+            >
               <img
                 src={`/assets/products/${picture[0]}`}
                 alt=""
                 className="covered-img"
               />
             </div>
-            <p className="text">{picture[1]}</p>
+            <Input
+              type="text"
+              placeholder="Nom de couleur"
+              minLength={2}
+              maxLength={255}
+              value={picture[1]}
+              onChange={(e) => setNewColorName(index, e.target.value)}
+            />
           </div>
           <div
             className="remove-icon"

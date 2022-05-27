@@ -1,6 +1,6 @@
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { windowState, fullSreenState } from "atoms/states";
+import { windowState, fullScreenState } from "atoms/states";
 import { AiOutlineFullscreen } from "react-icons/ai";
 
 function ImageSection({ setCurrentImage, currentImage, product }) {
@@ -8,7 +8,7 @@ function ImageSection({ setCurrentImage, currentImage, product }) {
   const { width } = useRecoilValue(windowState);
 
   // get global state of width
-  const setFs = useSetRecoilState(fullSreenState);
+  const setFs = useSetRecoilState(fullScreenState);
 
   // widgth of secondary image
   const secondaryWidth = width > 768 ? 70 : 50;

@@ -57,7 +57,7 @@ function EditModal({ product, onClose }) {
           gender: formData.gender,
           pictures: [
             [formData.mainPic, formData.mainPicName],
-            ...formData.pictures,
+            ...formData.pictures.splice(1),
           ],
         },
       };
@@ -96,6 +96,12 @@ function EditModal({ product, onClose }) {
             pictures={formData.pictures}
             setPictures={(newValue) => {
               setFormData({ ...formData, pictures: newValue });
+            }}
+            setNewColorName={(index, newValue) => {
+              const newPictures = [...formData.pictures];
+
+              newPictures[index][1] = newValue;
+              setFormData({ ...formData, pictures: newPictures });
             }}
           />
         </Form>
