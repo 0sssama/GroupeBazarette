@@ -29,6 +29,24 @@
 				&-image {
 					border-radius: var(--border-radius);
 					overflow: hidden;
+					&-fullscreen {
+						bottom: 1.25rem;
+						right: 1.25rem;
+						z-index: 10;
+						&, svg {
+							transition: all 600ms var(--transition);
+						}
+						svg {
+							font-size: 1.75rem;
+							color: var(--main)
+						}
+						&:hover {
+							transform: scale(0.9);
+							svg {
+								color: var(--main-light-700)
+							}
+						}
+					}
 				}
 			}
 			&-secondary {
