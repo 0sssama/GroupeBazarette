@@ -1,5 +1,9 @@
-import { useEffect, useState } from "react";
-import getProducts, { getProductById } from "utils/getProducts";
+import { useState } from "react";
+import getProducts, {
+  getProductById,
+  getProductsByType,
+  getProductsByCollection,
+} from "utils/getProducts";
 import Head from "next/head";
 import {
   ImageSection,
@@ -22,7 +26,7 @@ function shuffleArray(array) {
   return array;
 }
 
-function Product({ product, products, shuffledProducts }) {
+function Product({ product, typeProducts, collectionProducts }) {
   // state of current image
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -69,12 +73,8 @@ function Product({ product, products, shuffledProducts }) {
           colors={product.pictures}
           matiere={product.matiere}
         />
-        <Recommended products={shuffledProducts.slice(0, 10)} />
-        <FromCollection
-          products={products
-            .filter((p) => p.collectionName === product.collectionName)
-            .slice(0, 10)}
-        />
+        <Recommended products={typeProducts} />
+        <FromCollection products={collectionProducts} />
       </div>
     </div>
   );
@@ -101,13 +101,20 @@ export async function getStaticPaths() {
 // get product by id with getProductById and return it as a static prop
 export async function getStaticProps({ params }) {
   const product = await getProductById(params.id);
-  const products = await getProducts();
+  const typeProducts = await getProductsByType(product.type);
+  const collectionProducts = await getProductsByCollection(
+    product.collectionName
+  );
 
   return {
     props: {
       product: JSON.parse(JSON.stringify(product)),
-      products: JSON.parse(JSON.stringify(products)),
-      shuffledProducts: shuffleArray(JSON.parse(JSON.stringify(products))),
+      typeProducts: JSON.parse(
+        JSON.stringify(shuffleArray(typeProducts.splice(0, 10)))
+      ),
+      collectionProducts: JSON.parse(
+        JSON.stringify(shuffleArray(collectionProducts.splice(0, 10)))
+      ),
     },
   };
 }
