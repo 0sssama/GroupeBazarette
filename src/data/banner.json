@@ -1,6 +1,22 @@
 [
 	{
-		"image": "/assets/placeholders/placeholder.png",
+		"image": "/assets/placeholders/banner1.png",
 		"url": "/"
+	},
+	{
+		"image": "/assets/placeholders/banner2.png",
+		"url": "/vasco-de-gama"
+	},
+	{
+		"image": "/assets/placeholders/banner3.png",
+		"url": "/antonio-ferre"
+	},
+	{
+		"image": "/assets/placeholders/banner4.png",
+		"url": "/lunettes-solaires"
+	},
+	{
+		"image": "/assets/placeholders/banner5.png",
+		"url": "/lunettes-de-vue"
 	}
 ]
