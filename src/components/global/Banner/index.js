@@ -1,7 +1,7 @@
 import { Carousel } from "components";
 import banners from "data/banner.json";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Banner() {
   // next.js router
@@ -9,6 +9,13 @@ function Banner() {
 
   // current image state
   const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const bannerAnimation = setInterval(() => {
+      setCurrentImage((currentImage) => (currentImage + 1) % banners.length);
+    }, 3200);
+    return () => clearInterval(bannerAnimation);
+  }, []);
 
   return (
     <Carousel
