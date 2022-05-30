@@ -13,9 +13,9 @@ function Banner() {
   useEffect(() => {
     const bannerAnimation = setInterval(() => {
       setCurrentImage((currentImage) => (currentImage + 1) % banners.length);
-    }, 3200);
+    }, 4200);
     return () => clearInterval(bannerAnimation);
-  }, []);
+  }, [currentImage]);
 
   return (
     <Carousel

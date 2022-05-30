@@ -79,7 +79,7 @@ a {
 
 .wrapper {
 	max-width: 100%;
-	margin: 1rem auto 0;
+	margin: 0 auto;
 	@include tablet {
 		max-width: var(--wrapper-width);
 	}
@@ -106,7 +106,7 @@ img {
 
 .Page {
 	.Section {
-		margin-top: 6rem;
+		margin-top: 3rem;
 	}
 	&.for-section {
 		padding: 0;
@@ -139,7 +139,7 @@ a.call-to-action {
 }
 
 .Page {
-	padding-top: 4rem;
+	padding-top: 2rem;
 	padding-bottom: 4rem;
 }
 

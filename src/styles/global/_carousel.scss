@@ -1,7 +1,7 @@
 .Carousel {
 	height: 100%;
 	&.Banner {
-		height: 350px;
+		height: 150px;
 		@include desktop {
 			height: 400px;
 		}
@@ -27,7 +27,7 @@
 		}
 	}
 	&.ProductCarousel {
-		height: 350px;
+		height: 280px;
 		@include desktop {
 			height: 450px;
 		}
