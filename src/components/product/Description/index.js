@@ -1,7 +1,14 @@
 import { useRecoilValue } from "recoil";
 import { windowState } from "atoms/states";
 
-function Description({ title, description, colors, matiere, collection }) {
+function Description({
+  title,
+  description,
+  colors,
+  matiere,
+  collection,
+  type,
+}) {
   // global width state
   const { width } = useRecoilValue(windowState);
 
@@ -24,7 +31,7 @@ function Description({ title, description, colors, matiere, collection }) {
           </span>
         ))}
         .
-        {collection === "Vasco De Gama" && (
+        {collection === "Vasco de Gama" && (
           <>
             <br />
             <br />
@@ -33,6 +40,18 @@ function Description({ title, description, colors, matiere, collection }) {
             lunettes de soleil Vasco De Gamma sont fabriquées à partir de
             matériaux de haute qualité et sont conçues pour offrir une
             protection optimale contre les rayons nocifs du soleil.
+          </>
+        )}
+        {collection === "Antonio Ferre" && type === "Lunettes solaires" && (
+          <>
+            <br />
+            <br />
+            Les lunettes de soleil Antonio Ferre sont conçues pour offrir un
+            style élégant et un confort ultime.
+            <br />
+            <br />
+            Les lunettes de soleil Antonio Ferre sont le choix parfait pour ceux
+            qui veulent avoir un look chic et être à l'aise.
           </>
         )}
       </p>

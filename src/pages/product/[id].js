@@ -73,6 +73,7 @@ function Product({ product, typeProducts, collectionProducts }) {
           colors={product.pictures}
           matiere={product.matiere}
           collection={product.collectionName}
+          type={product.type}
         />
         <Recommended products={typeProducts} />
         <FromCollection products={collectionProducts} />
