@@ -1,14 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { windowState } from "atoms/states";
 
-function Description({
-  title,
-  description,
-  colors,
-  matiere,
-  collection,
-  type,
-}) {
+function Description({ title, description, colors, collection, type }) {
   // global width state
   const { width } = useRecoilValue(windowState);
 
@@ -20,10 +13,7 @@ function Description({
         <span>{title}</span>
       </h2>
       <p className="ProductPage-description-text text">
-        {description}. La face en {matiere} découpée et surpiquée apporte à
-        cette monture ronde tune pointe d'originalité ! Vous pouvez
-        personnaliser votre MAGIC grâce à son panel de clips. Disponible
-        également en{" "}
+        {description}. Disponible également en{" "}
         {colors.map((color, i) => (
           <span key={i}>
             {i === 0 ? "" : ", "}

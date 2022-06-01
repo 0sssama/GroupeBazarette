@@ -71,7 +71,6 @@ function Product({ product, typeProducts, collectionProducts }) {
           title={product.title}
           description={product.description}
           colors={product.pictures}
-          matiere={product.matiere}
           collection={product.collectionName}
           type={product.type}
         />
