@@ -83,24 +83,8 @@ function Product({ product, typeProducts, collectionProducts }) {
 
 export default Product;
 
-// get all products with getProducts and return their ids as static paths
-export async function getStaticPaths() {
-  const products = await getProducts();
-
-  const paths = products.map((product) => ({
-    params: {
-      id: product._id.toString(),
-    },
-  }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
 // get product by id with getProductById and return it as a static prop
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const product = await getProductById(params.id);
   const typeProducts = await getProductsByType(product.type);
   const collectionProducts = await getProductsByCollection(
